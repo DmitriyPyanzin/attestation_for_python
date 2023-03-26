@@ -1,4 +1,4 @@
-import greeting, menu, all_read, create, filtration_for_date, filtration_for_id
+import greeting, menu, all_read, create, filtration_for_date, filtration_for_id, redactor
 
 FILENAME = "notes.csv"
 
@@ -15,6 +15,8 @@ while flag:
         filtration_for_date.filtr_for_date(FILENAME)
     elif num == "4":
         filtration_for_id.filtr_for_id(FILENAME)
+    elif num == "5":
+        redactor.redactor(FILENAME)
     elif num == "0":
         print("\nДо встречи!\n")
         flag = False
