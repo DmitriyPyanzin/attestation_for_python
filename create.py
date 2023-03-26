@@ -40,6 +40,10 @@ def create_note(FILENAME):
                 else:
                     new_file.writelines(row)
                     new_file.write("\n")
+            if count == 1:
+                parametrs = ["ID", "Заголовок", "Тело", "Дата создания"]
+                file_writer = csv.DictWriter(new_file, delimiter=";", lineterminator="\n", fieldnames=parametrs)
+                file_writer.writerow(note)
 
 
     os.rename("notes.csv", "0.csv")
